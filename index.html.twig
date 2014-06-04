@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block main %}
+
+{% if app.session.get('user') %}
+  <h1 class="page-header">
+    <a href="{{ path('logout') }}" class="btn btn-default pull-right">Logout</a>
+    Welcome {{ app.session.get('user').username }}</h1>
+
+  {{ dump(app.session.get('user')) }}
+
+{% else %}
+  <h1 class="page-header">Welcome Guest</h1>
+
+  <p>
+    This is a simple site that uses DepEd's SSO for authentication
+  </p>
+
+  <a href="{{ deped_connect_url }}" class="btn btn-success btn-lg">DepEd SSO</a>
+{% endif %}
+
+{% endblock %}
