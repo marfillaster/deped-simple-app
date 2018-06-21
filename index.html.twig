@@ -6,9 +6,9 @@
   <h1 class="page-header">
     <a href="{{ path('logout') }}" class="btn btn-default pull-right">Logout</a>
     Welcome {{ app.session.get('user').username }}</h1>
-
+<pre>
   {{ dump(app.session.get('user')) }}
-
+</pre>
 {% else %}
   <h1 class="page-header">Welcome Guest</h1>
 

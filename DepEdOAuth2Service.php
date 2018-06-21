@@ -30,7 +30,7 @@ class DepEdOAuth2Service extends AbstractService
         $this->baseOAuth2Endpoint = $baseOAuth2Endpoint;
 
         if (null === $baseApiUri) {
-            $this->baseApiUri = new Uri('http://lis.deped.gov.ph/uis/api/');
+            $this->baseApiUri = new Uri('http://lis.deped.gov.ph/uis/');
         }
     }
 
@@ -48,7 +48,7 @@ class DepEdOAuth2Service extends AbstractService
      */
     public function getAccessTokenEndpoint()
     {
-        return new Uri($this->baseOAuth2Endpoint . 'oauth/v2/token');
+        return new Uri($this->baseApiUri . 'oauth/v2/token');
     }
 
     /**

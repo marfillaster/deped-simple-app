@@ -47,7 +47,7 @@ $app->get($app['deped.oauth2.callback_uri'] , function() use($app) {
 
   // retrieve user information, a bearer header that contains access_token is attached behind the scene
   // which allows the api security to authorize the request
-  $user = $app['deped_oauth2']->request('user/me?context='.$context);
+  $user = $app['deped_oauth2']->request('api/user/me?context='.$context);
 
   // we simply store the payload in session which also indicates that the user is loggedin
   $app['session']->set('user', json_decode($user, true));

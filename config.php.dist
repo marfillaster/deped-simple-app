@@ -6,13 +6,15 @@ $app['deped.oauth2.client_secret']  = 'APP_CLIENT_SECRET';
 $app['debug'] = true;
 
 # test environment
-$app['deped.oauth2.base_url']      = 'http://121.97.254.136/uis/';
-$app['deped.api.base_url']       = 'http://121.97.254.136/uis/api/';
-$app['deped.toolbar_url']           = 'http://121.97.254.136/uis/apps/nav';
+$app['deped.oauth2.base_url']      = 'https://121.97.254.136/uis/';
+$app['deped.api.base_url']       = 'https://121.97.254.136/uis/';
+$app['deped.toolbar_url']           = 'https://121.97.254.136/uis/apps/nav';
 
 # production
-# $app['deped.oauth2.base_url']      = 'http://lis.deped.gov.ph/uis/';
-# $app['deped.api.base_url']       = 'http://lis.deped.gov.ph/uis/api/';
-# $app['deped.toolbar_url']           = 'http://lis.deped.gov.ph/uis/apps/nav';
+# $app['deped.oauth2.base_url']      = 'https://lis.deped.gov.ph/uis/';
+# $app['deped.api.base_url']       = 'https://lis.deped.gov.ph/uis/';
+# $app['deped.toolbar_url']           = 'https://lis.deped.gov.ph/uis/apps/nav';
 
 $app['deped.oauth2.callback_uri']   = '/oauth2_login';
+
+
